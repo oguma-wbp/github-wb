@@ -1,0 +1,152 @@
+@charset "UTF^8";
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+/*========================
+        header
+=========================*/
+header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;/* 左揃え表示 */
+    height: 100px;
+    max-width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 500px; /* imgにクラスを付けて、max-width ➡ 画像の大きさの固定 */
+    width: 30%;      /* これに対してのwidthが、max-widthの大きさを保ち続ける　maxwidthを使うときは基本この２つはセットで使う事が多い。*/
+}                     /* width% を100ではなく30～50ぐらいにすることで、表示させたい場所に表示させ続けられる、かもね。*/
+
+header nav .main-menu{
+    display: flex;
+    /*height: 100px; サブメニューの底辺にまで色が反映されて困るなら　heightで高さを固定してあげると解決することがあるよ。*/
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/*=======================
+        header ul
+=======================*/
+.main-menu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px; /* vw ➡ 見てる画面に対するサイズ 画面のサイズを変えるとそれに合わせて文字のサイズも変わってくれる */
+    font-weight: bold;
+    padding-top: 30px;
+    right: 0;
+}
+
+.main-menu>li {
+    /*position: relative;*/
+    margin-right: 10px;
+    /* 値を調整して間隔を広げる */
+}
+
+.main-menu>li:last-child {
+    margin-right: 0;
+    /* 最後のリンクには余白を設けない */
+}
+
+.main-menu>li>a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.sub-menu {
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-menu>li:hover>.sub-menu { /* li:hover　そこにカーソルを合わせるとこの中に書かれているcssのコードが実行される。 */
+    display: block;             /* javascriptに書いてあるコードとやっている事は全く一緒。どっちでも動くよ。 */
+}
+
+.sub-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.sub-menu li a:hover {
+    background-color: pink;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 1%;
+}
+
+/*=======================
+        main
+=======================*/
+body {
+    background-color: #5ce1e6;
+}
+
+#home {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: orange;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.movie-item {
+    width: 500px;
+    /* calc(50% - 10px) 動画の幅を親要素の50%から10pxを引いた値に設定 */
+    margin-bottom: 20px;
+    /* 動画間の垂直方向の余白 */
+
+}
+
+.movie-item iframe {
+    width: 100%;
+    /*動画の幅を100%に設定*/ 
+
+}
+
+.douga {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: blue;
+}

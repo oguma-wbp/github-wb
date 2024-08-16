@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/swiper.css">
+    <link rel="stylesheet" href="./css/sakaba.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="header-list">
+            <ul class="main-menu">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#">お品書き</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">お寿司</a></li>
+                        <li><a href="#">お魚料理</a></li>
+                        <li><a href="#">揚げ物</a></li>
+                        <li><a href="#">お手軽</a></li>
+                        <li><a href="#">お飲み物</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">お知らせはこちら</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">X (旧 Twitter)</a></li>
+                        <li><a href="https://www.facebook.com/login.php/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/?hl=ja" target="_blank">Instagram</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ポートフォリオ</a>
+                    <ul class="sub-menu">
+                        <li><a href="otamesi.html" target="_blank">その１</a></li>
+                        <li><a href="index.html">その２</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="top-images"><img class="top" src="./images/top.jpg" alt="店名"></div>
+        <h1 id="home">ようこそっ<span class="green">グマの巣穴</span>へ！🐻</h1>
+        <p class="nedan">ゆったりとした時間の流れる中で、上質な<span class="sakana">お寿司</span>や<span
+                class="sakana">鮮魚料理</span>をお楽しみいただけます。<br>
+            落ち着いた雰囲気の中、心ゆくまで味わい尽くせる空間をご用意して従業員一同お待ちしております。</p>
+
+        <h2>人気メニューご紹介</h2>
+
+        <!--swiperの使いかた
+        1.swiperというクラス名の<div>タグを用意
+        2.swiperの中にswiper-wrapperというクラス名の<div>タグを用意
+        3.swiper-wrapperの中に、スライドする画像を設定
+        画像は、swiper-slideというクラス名の<div>タグを使い、style属性でbackgroung-imageとして設定 
+        -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(./images/sushi.jpg)";></div>
+                <div class="swiper-slide" style="background-image: url(./images/sasimi.jpg)";></div>
+                <div class="swiper-slide" style="background-image: url(./images/karaage.jpg)";></div>
+                <div class="swiper-slide" style="background-image: url(./images/osake.jpg)";></div>
+            </div>
+            <!-- 矢印ボタンを作りたいときは以下のHTMLコードとjsコードを追加 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+<h2 class="heya">個室紹介</h2>
+
+            <div class="kositu-img">
+                <img src="./images/kositu.jpg" alt="個室">
+                <img src="./images/kositu2.jpg" alt="大個室">
+            </div>
+
+        <div class="kositu-text">
+            <p>お客様にご安心いただけるよう完全個室のみ、プライベート空間を完全に確保し、<br>
+                最大20名様まで対応可能な、ゆとりの空間をご用意しております。<br>
+                ゆったりとした時間をお過ごしいただけるよう、心よりお待ちしております。</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/swiper.js"></script>
+
+    </main>
+
+    <footer>
+
+        <h3>アクセス</h3>
+        <div class="iframe">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1441.7031281642783!2d10.395855871060443!3d43.722886701111186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d591a6c44e88cd%3A0x32eca9b1d554fc03!2z44OU44K144Gu5pac5aGU!5e0!3m2!1sja!2sjp!4v1723582237822!5m2!1sja!2sjp"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="access">住所：京戸府和風市御寺町 〒111-XXXX</p>
+        <p class="access">電話番号：999-8877-XXXX</p>
+        <p class="access">営業時間：16時00分 ～ 1時30分 ラストオーダー：1時00分</p>
+        <p class="kossori">※時々、店長の森野 熊山(もりのぐまさん)による、カラオケ大会が開かれることがございます。（ 嘘です。）</p>
+        <p class="copyright">© 2024 GumanoSuana</p>
+    </footer>
+
+</body>
+
+</html>

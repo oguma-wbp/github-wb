@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    /* 左揃え表示 */
+    height: 100px;
+    /* 高さ指定をつけてやらないとサブメニューを開いたときに変な事になる。 */
+    max-width: 100%;
+    /* 必要性があまりわからない */
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header nav .main-menu {
+    display: flex;
+    height: 100px;
+    /* サブメニューの底辺にまで色が反映されて困るなら　heightで高さを固定してあげると解決することがあるよ。*/
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/*===============
+ヘッダー
+===============*/
+
+.header-list {
+    background-color: rgb(157, 154, 154);
+}
+
+.main-menu {
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-right: 1%;
+}
+
+.main-menu>li {
+    /*position: relative;*/
+    margin-right: 10px;
+    /* 値を調整して間隔を広げる */
+}
+
+.main-menu>li:last-child {
+    margin-right: 0;
+    /* 最後のリンクには余白を設けない */
+}
+
+.main-menu>li>a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.sub-menu {
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-menu>li:hover>.sub-menu {
+    /* li:hover　そこにカーソルを合わせるとこの中に書かれているcssのコードが実行される。 */
+    display: block;
+    /* javascriptに書いてあるコードとやっている事は全く一緒。どっちでも動くよ。 */
+}
+
+.sub-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.sub-menu li a:hover {
+    background-color: rgb(144, 219, 241);
+}
+
+
+
+/*===============
+メイン
+===============*/
+
+#home {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: gray;
+}
+
+
+.green {
+    color: green;
+}
+
+.top-images {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/*.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gapプロパティを使って、写真の間に20pxのスペースを設けます */
+    /*gap: 20px;
+}*/
+
+.food {
+    width: 300px;
+    /* 写真の幅を固定 */
+    height: 200px;
+    /* 写真の高さを固定 */
+    object-fit: cover;
+    /* 写真の縦横比を維持しつつ、コンテナに収まるように表示 */
+}
+
+.sakana {
+    color: rgb(241, 104, 104);
+}
+
+.nedan {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.heya{
+    margin-top: 40px;
+}
+
+.kositu-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.kositu-img img {
+    max-width: 1000px;
+}
+
+.kositu-text {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+body {
+    background-color: #f5f5ef;
+}
+
+/*===============
+フッター
+===============*/
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    padding-top: 30px;
+}
+
+.iframe {
+    display: flex;
+    justify-content: center;
+}
+
+.access {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.kossori {
+    font-size: 0.5em;
+}
+
+/* コピーライト */
+p.copyright {
+    font-size: 0.8em;
+    /* フォントサイズを小さく設定 */
+    text-align: center;
+    /* 中央揃え */
+    margin-top: 30px;
+    /* 上の余白 */
+    background-color: gray;
+}

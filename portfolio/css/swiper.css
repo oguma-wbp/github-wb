@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.swiper-slide {
+  /* 背景画像back-ground-imageの設定(HTMLテキストp162~163) */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+  /* 背景画像(background-image)を使う場合、必ずheightをつける */
+}
+
+/*矢印の色を変える　初期は青色*/
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-color: blue;
+  /* 初期の青色 */
+}
